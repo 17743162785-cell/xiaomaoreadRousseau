@@ -15,7 +15,7 @@ describe('Rousseau reader', () => {
 
     expect(screen.getByRole('heading', { name: '卢梭思想交互式共读' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /人生而自由/ })).toBeInTheDocument()
-    expect(screen.getByText('爱弥儿')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: '爱弥儿' })).toBeInTheDocument()
     expect(await screen.findByText(/人是生而自由的，可他到处都被束缚着/)).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: '政治经济' }))

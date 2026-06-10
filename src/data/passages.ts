@@ -3,6 +3,7 @@ import { additionalPassages } from './additionalPassages'
 import { bookOverviewPassages } from './bookOverviewPassages'
 import { expandedTextualPassages } from './expandedTextualPassages'
 import { famousWorksCloseReadings } from './famousWorksCloseReadings'
+import { literaryExpansionPassages } from './literaryExpansionPassages'
 import { rousseauThoughtPassages } from './rousseauThoughtPassages'
 import { textualDeepeningPassages } from './textualDeepeningPassages'
 
@@ -174,6 +175,7 @@ export const passages: Passage[] = [
   ...famousWorksCloseReadings,
   ...textualDeepeningPassages,
   ...expandedTextualPassages,
+  ...literaryExpansionPassages,
   ...bookOverviewPassages,
 ]
 

@@ -33,7 +33,11 @@ describe('Rousseau reader', () => {
 
     expect(await screen.findByText('reader')).toBeInTheDocument()
 
-    await user.click(screen.getAllByRole('button', { name: '高亮' })[0])
+    const firstHighlightButton = document.querySelector<HTMLButtonElement>(
+      '#opening-problem button[title="高亮这段"]',
+    )
+    expect(firstHighlightButton).not.toBeNull()
+    await user.click(firstHighlightButton!)
     await waitFor(() => expect(screen.getByRole('button', { name: '已高亮' })).toBeInTheDocument())
 
     await user.type(

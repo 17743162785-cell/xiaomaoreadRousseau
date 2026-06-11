@@ -1,6 +1,7 @@
 import type { Passage } from '../types'
 import { additionalPassages } from './additionalPassages'
 import { bookOverviewPassages } from './bookOverviewPassages'
+import { continuedTextExpansionPassages } from './continuedTextExpansionPassages'
 import { expandedTextualPassages } from './expandedTextualPassages'
 import { famousWorksCloseReadings } from './famousWorksCloseReadings'
 import { literaryExpansionPassages } from './literaryExpansionPassages'
@@ -176,6 +177,7 @@ export const passages: Passage[] = [
   ...textualDeepeningPassages,
   ...expandedTextualPassages,
   ...literaryExpansionPassages,
+  ...continuedTextExpansionPassages,
   ...bookOverviewPassages,
 ]
 

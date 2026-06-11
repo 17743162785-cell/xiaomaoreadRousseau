@@ -5,9 +5,9 @@
   position: relative;
   isolation: isolate;
   background:
-    linear-gradient(90deg, rgba(245, 248, 240, 0.28), transparent 23%, transparent 76%, rgba(243, 246, 239, 0.24)),
-    linear-gradient(180deg, rgba(255, 252, 239, 0.05), rgba(202, 221, 210, 0.1)),
-    radial-gradient(circle at 48% 0, rgba(255, 249, 226, 0.24), transparent 44%);
+    linear-gradient(90deg, rgba(245, 249, 238, 0.1), transparent 22%, transparent 76%, rgba(246, 248, 240, 0.12)),
+    linear-gradient(180deg, rgba(255, 252, 239, 0.02), rgba(179, 205, 195, 0.1)),
+    radial-gradient(circle at 48% 0, rgba(255, 238, 186, 0.18), transparent 46%);
 }
 
 .app-shell::before {
@@ -17,8 +17,8 @@
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(31, 111, 104, 0.08), transparent 18%, transparent 74%, rgba(24, 44, 38, 0.18)),
-    linear-gradient(180deg, transparent 0, rgba(255, 251, 236, 0.1) 36%, rgba(23, 33, 31, 0.08) 100%);
+    linear-gradient(90deg, rgba(31, 107, 97, 0.12), transparent 18%, transparent 74%, rgba(18, 37, 32, 0.18)),
+    linear-gradient(180deg, transparent 0, rgba(255, 251, 236, 0.05) 34%, rgba(20, 32, 29, 0.1) 100%);
 }
 
 .app-shell::after {
@@ -37,21 +37,24 @@
 .reading-rail {
   border-right: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(255, 252, 238, 0.38), rgba(230, 241, 234, 0.26)),
-    radial-gradient(circle at 0 22%, rgba(31, 111, 104, 0.18), transparent 46%),
-    repeating-linear-gradient(0deg, rgba(179, 138, 46, 0.028) 0 1px, transparent 1px 30px);
+    linear-gradient(180deg, rgba(255, 252, 238, 0.46), rgba(228, 242, 234, 0.28)),
+    radial-gradient(circle at 0 22%, rgba(31, 107, 97, 0.18), transparent 46%),
+    url('/images/rousseau-atmosphere.svg'),
+    repeating-linear-gradient(0deg, rgba(176, 132, 53, 0.024) 0 1px, transparent 1px 30px);
   background-position:
     center,
     center,
+    106% 12px,
     0 0;
   background-size:
     auto,
     auto,
+    240px auto,
     auto;
-  backdrop-filter: blur(7px) saturate(1.04);
+  backdrop-filter: blur(9px) saturate(1.05);
   box-shadow:
     inset -1px 0 0 rgba(255, 255, 255, 0.28),
-    18px 0 46px rgba(25, 38, 35, 0.04);
+    18px 0 46px rgba(25, 38, 35, 0.035);
   padding: 22px 16px;
 }
 
@@ -279,30 +282,34 @@
   min-width: 0;
   padding: 0 min(5vw, 64px) 56px;
   background:
-    linear-gradient(90deg, transparent 0, rgba(255, 253, 244, 0.12) 9%, rgba(255, 253, 244, 0.08) 91%, transparent 100%),
-    linear-gradient(180deg, rgba(255, 251, 236, 0.04), transparent 420px),
-    repeating-linear-gradient(90deg, rgba(31, 111, 104, 0.016) 0 1px, transparent 1px 112px);
+    linear-gradient(90deg, transparent 0, rgba(255, 253, 244, 0.08) 9%, rgba(255, 253, 244, 0.06) 91%, transparent 100%),
+    linear-gradient(180deg, rgba(255, 251, 236, 0.02), transparent 430px),
+    repeating-linear-gradient(90deg, rgba(31, 107, 97, 0.014) 0 1px, transparent 1px 112px);
 }
 
 .reader-hero {
   position: relative;
-  min-height: clamp(430px, 58vh, 640px);
+  min-height: clamp(520px, 72vh, 760px);
   margin: 0 calc(-1 * min(5vw, 64px));
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   border-bottom: 1px solid rgba(31, 111, 104, 0.18);
   background-image:
-    linear-gradient(90deg, rgba(250, 243, 222, 0.5) 0%, rgba(249, 246, 234, 0.38) 36%, rgba(220, 234, 225, 0.08) 63%, rgba(11, 28, 24, 0.02) 100%),
-    linear-gradient(180deg, rgba(255, 250, 234, 0.1), rgba(213, 229, 221, 0.04) 52%, rgba(236, 242, 235, 0.28) 100%);
+    linear-gradient(90deg, rgba(252, 247, 232, 0.84) 0%, rgba(252, 247, 232, 0.66) 32%, rgba(235, 243, 236, 0.2) 58%, rgba(14, 31, 27, 0.04) 100%),
+    linear-gradient(180deg, rgba(255, 249, 232, 0.16), rgba(214, 231, 222, 0.02) 54%, rgba(235, 243, 236, 0.34) 100%),
+    url('/images/rousseau-solitary-walk.webp');
   background-position:
     center,
-    center;
+    center,
+    center center;
   background-size:
     auto,
-    auto;
+    auto,
+    cover;
   box-shadow:
-    inset 0 -150px 120px rgba(237, 244, 237, 0.3),
+    inset 0 -150px 120px rgba(233, 242, 235, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
     0 24px 70px rgba(25, 38, 35, 0.12);
 }
 
@@ -312,25 +319,37 @@
   inset: 18px;
   border: 1px solid rgba(255, 253, 242, 0.46);
   border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 251, 236, 0.08), transparent 48%, rgba(15, 34, 29, 0.08)),
+    url('/images/rousseau-atmosphere.svg');
+  background-position:
+    center,
+    88% 18px;
+  background-repeat: no-repeat;
+  background-size:
+    auto,
+    340px auto;
   box-shadow:
     inset 0 0 0 1px rgba(31, 111, 104, 0.16),
     inset 0 0 90px rgba(255, 248, 226, 0.18);
+  opacity: 0.88;
   pointer-events: none;
 }
 
 .reader-hero::after {
   content: '';
   position: absolute;
-  inset: auto 0 0;
-  height: 42%;
+  inset: 0;
+  height: auto;
   background:
-    linear-gradient(180deg, transparent, rgba(233, 242, 235, 0.82));
+    radial-gradient(circle at 20% 44%, rgba(255, 248, 224, 0.38), transparent 28%),
+    linear-gradient(180deg, rgba(255, 251, 236, 0.06) 0%, transparent 45%, rgba(229, 239, 231, 0.86) 100%);
   pointer-events: none;
 }
 
 .hero-copy {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 760px;
   padding: clamp(34px, 5vw, 70px) min(5vw, 64px);
 }
@@ -360,8 +379,8 @@
   line-height: 1.02;
   letter-spacing: 0;
   text-shadow:
-    0 1px 0 rgba(255, 252, 238, 0.82),
-    0 18px 54px rgba(255, 249, 226, 0.42);
+    0 1px 0 rgba(255, 252, 238, 0.92),
+    0 12px 42px rgba(255, 248, 220, 0.62);
   text-wrap: balance;
 }
 
@@ -369,7 +388,9 @@
   max-width: 650px;
   margin: 18px 0 0;
   color: var(--soft-ink);
-  text-shadow: 0 1px 18px rgba(255, 252, 238, 0.82);
+  text-shadow:
+    0 1px 0 rgba(255, 252, 238, 0.78),
+    0 12px 26px rgba(255, 252, 238, 0.72);
   font-size: clamp(17px, 1.7vw, 21px);
   line-height: 1.75;
 }
@@ -423,15 +444,18 @@
   border: 1px solid rgba(31, 111, 104, 0.16);
   border-radius: 8px;
   background:
-    linear-gradient(115deg, rgba(255, 252, 242, 0.72), rgba(238, 247, 240, 0.58) 56%, rgba(249, 244, 229, 0.66)),
-    radial-gradient(circle at 92% 12%, rgba(31, 111, 104, 0.2), transparent 28%),
+    linear-gradient(115deg, rgba(255, 252, 242, 0.76), rgba(238, 247, 240, 0.58) 54%, rgba(249, 244, 229, 0.64)),
+    url('/images/rousseau-atmosphere.svg'),
+    radial-gradient(circle at 92% 12%, rgba(31, 107, 97, 0.18), transparent 28%),
     repeating-linear-gradient(90deg, rgba(31, 111, 104, 0.032) 0 1px, transparent 1px 28px);
   background-position:
     center,
+    96% 18px,
     center,
     0 0;
   background-size:
     auto,
+    360px auto,
     auto,
     auto;
   padding: clamp(18px, 3vw, 28px);
@@ -449,10 +473,19 @@
   height: 180px;
   border: 1px solid rgba(31, 111, 104, 0.12);
   background:
-    linear-gradient(180deg, rgba(255, 252, 238, 0.5), rgba(255, 255, 255, 0.04)),
+    linear-gradient(180deg, rgba(255, 252, 238, 0.52), rgba(255, 255, 255, 0.04)),
+    url('/images/rousseau-natural-state.webp'),
     repeating-linear-gradient(135deg, rgba(31, 111, 104, 0.04) 0 1px, transparent 1px 16px);
+  background-position:
+    center,
+    52% 62%,
+    center;
+  background-size:
+    auto,
+    360px auto,
+    auto;
   transform: rotate(8deg);
-  opacity: 0.74;
+  opacity: 0.52;
   pointer-events: none;
 }
 
@@ -465,7 +498,7 @@
   height: 58px;
   border-bottom: 1px solid rgba(31, 111, 104, 0.16);
   background:
-    linear-gradient(178deg, transparent 0 48%, rgba(31, 111, 104, 0.18) 49% 50%, transparent 51%),
+    linear-gradient(178deg, transparent 0 48%, rgba(31, 107, 97, 0.2) 49% 50%, transparent 51%),
     radial-gradient(ellipse at 18% 64%, rgba(31, 111, 104, 0.12) 0 12%, transparent 13%),
     radial-gradient(ellipse at 42% 46%, rgba(31, 111, 104, 0.1) 0 11%, transparent 12%),
     radial-gradient(ellipse at 68% 58%, rgba(31, 111, 104, 0.08) 0 10%, transparent 11%);
@@ -628,7 +661,21 @@
   display: grid;
   gap: 24px;
   margin-top: 24px;
+  position: relative;
   counter-reset: passage;
+}
+
+.passage-stack::before {
+  content: '';
+  position: absolute;
+  left: clamp(18px, 2.4vw, 30px);
+  top: 18px;
+  bottom: 18px;
+  width: 1px;
+  background:
+    linear-gradient(180deg, rgba(31, 107, 97, 0.04), rgba(31, 107, 97, 0.3), rgba(176, 132, 53, 0.2), rgba(31, 107, 97, 0.04)),
+    repeating-linear-gradient(180deg, rgba(139, 59, 52, 0.22) 0 5px, transparent 5px 17px);
+  pointer-events: none;
 }
 
 .passage-card {
@@ -636,23 +683,26 @@
   overflow: hidden;
   counter-increment: passage;
   background:
-    linear-gradient(90deg, rgba(255, 254, 249, 0.88), rgba(255, 251, 239, 0.82)),
-    radial-gradient(circle at 100% 0, rgba(31, 111, 104, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(253, 251, 245, 0.82)),
-    repeating-linear-gradient(0deg, rgba(179, 138, 46, 0.03) 0 1px, transparent 1px 31px);
+    linear-gradient(90deg, rgba(255, 254, 249, 0.93), rgba(255, 250, 238, 0.86)),
+    url('/images/rousseau-atmosphere.svg'),
+    radial-gradient(circle at 100% 0, rgba(31, 107, 97, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.91), rgba(253, 251, 245, 0.84)),
+    repeating-linear-gradient(0deg, rgba(176, 132, 53, 0.03) 0 1px, transparent 1px 31px);
   background-position:
     center,
+    calc(100% + 88px) -42px,
     center,
     center,
     0 0;
   background-size:
     auto,
+    320px auto,
     auto,
     auto,
     auto;
   border: 1px solid rgba(31, 111, 104, 0.14);
   border-radius: 8px;
-  padding: clamp(22px, 4vw, 38px);
+  padding: clamp(24px, 4vw, 40px);
   box-shadow:
     0 22px 58px rgba(25, 38, 35, 0.09),
     inset 0 0 0 1px rgba(255, 255, 255, 0.48);
@@ -670,11 +720,15 @@
 .passage-card::before {
   content: '';
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
+  inset: 26px auto 26px 20px;
+  width: 2px;
   background:
-    linear-gradient(180deg, rgba(31, 111, 104, 0.78), rgba(179, 138, 46, 0.62)),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 18px);
+    linear-gradient(180deg, rgba(31, 107, 97, 0.1), rgba(31, 107, 97, 0.7), rgba(176, 132, 53, 0.58)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0 1px, transparent 1px 18px);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 7px rgba(255, 253, 244, 0.48),
+    0 0 26px rgba(31, 107, 97, 0.12);
 }
 
 .passage-card::after {
@@ -692,9 +746,16 @@
 
 .passage-card.active {
   border-color: rgba(31, 111, 104, 0.38);
+  transform: translateY(-1px);
   box-shadow:
     0 24px 70px rgba(25, 38, 35, 0.14),
     inset 0 0 0 1px rgba(255, 255, 255, 0.58);
+}
+
+.passage-card.active::before {
+  width: 3px;
+  background:
+    linear-gradient(180deg, rgba(139, 59, 52, 0.28), rgba(31, 107, 97, 0.86), rgba(176, 132, 53, 0.7));
 }
 
 .passage-card.highlighted {
@@ -709,6 +770,39 @@
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 14px;
+}
+
+.path-coordinate {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  color: rgba(31, 107, 97, 0.78);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.path-coordinate::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(31, 107, 97, 0.58);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(139, 59, 52, 0.58) 0 24%, rgba(255, 253, 244, 0.9) 25% 54%, rgba(31, 107, 97, 0.28) 55%);
+  box-shadow:
+    0 0 0 4px rgba(236, 244, 236, 0.74),
+    0 0 18px rgba(31, 107, 97, 0.18);
+}
+
+.passage-card.active .path-coordinate::before {
+  background:
+    radial-gradient(circle, rgba(139, 59, 52, 0.82) 0 27%, rgba(255, 253, 244, 0.98) 28% 55%, rgba(31, 107, 97, 0.5) 56%);
+  box-shadow:
+    0 0 0 5px rgba(236, 244, 236, 0.86),
+    0 0 24px rgba(31, 107, 97, 0.3);
 }
 
 .passage-meta span {
@@ -845,7 +939,9 @@
 .guide-block {
   margin-top: 22px;
   border-left: 3px solid var(--green);
-  background: rgba(239, 247, 243, 0.56);
+  background:
+    linear-gradient(90deg, rgba(232, 244, 238, 0.72), rgba(255, 253, 244, 0.52)),
+    repeating-linear-gradient(0deg, rgba(31, 107, 97, 0.018) 0 1px, transparent 1px 28px);
   border-radius: 0 8px 8px 0;
   padding: 14px 16px;
 }
@@ -866,11 +962,15 @@
   margin-top: 24px;
   border-top: 1px solid rgba(31, 111, 104, 0.14);
   border-bottom: 1px solid rgba(31, 111, 104, 0.14);
+  background:
+    linear-gradient(90deg, rgba(255, 253, 246, 0.14), rgba(232, 244, 238, 0.16), rgba(255, 253, 246, 0.08));
 }
 
 .further-reading {
   margin-top: 22px;
-  background: linear-gradient(180deg, rgba(247, 249, 247, 0.92), rgba(255, 255, 255, 0.96));
+  background:
+    linear-gradient(180deg, rgba(247, 249, 247, 0.92), rgba(255, 255, 255, 0.94)),
+    radial-gradient(circle at 100% 0, rgba(139, 59, 52, 0.07), transparent 34%);
   border: 1px solid rgba(31, 111, 104, 0.16);
   border-radius: 8px;
   padding: 18px;
@@ -933,7 +1033,8 @@
   gap: 14px;
   border: 1px solid rgba(220, 228, 223, 0.8);
   border-radius: 8px;
-  background: rgba(255, 253, 248, 0.62);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.74), rgba(249, 251, 247, 0.64));
   padding: 16px;
   backdrop-filter: blur(4px);
 }
@@ -988,7 +1089,8 @@
 
 .question-block p {
   background:
-    linear-gradient(90deg, rgba(31, 111, 104, 0.08), rgba(255, 253, 244, 0.56));
+    linear-gradient(90deg, rgba(31, 107, 97, 0.1), rgba(255, 253, 244, 0.58)),
+    linear-gradient(180deg, transparent, rgba(176, 132, 53, 0.03));
   border: 1px solid rgba(31, 111, 104, 0.14);
   border-radius: 8px;
   padding: 12px 14px;
@@ -1072,10 +1174,21 @@
 .discussion-panel {
   border-left: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(253, 252, 247, 0.36), rgba(239, 248, 244, 0.24)),
-    radial-gradient(circle at 100% 20%, rgba(139, 47, 57, 0.08), transparent 42%),
-    repeating-linear-gradient(0deg, rgba(31, 111, 104, 0.025) 0 1px, transparent 1px 31px);
-  backdrop-filter: blur(7px) saturate(1.05);
+    linear-gradient(180deg, rgba(253, 252, 247, 0.44), rgba(237, 248, 243, 0.28)),
+    radial-gradient(circle at 100% 20%, rgba(139, 59, 52, 0.08), transparent 42%),
+    url('/images/rousseau-atmosphere.svg'),
+    repeating-linear-gradient(0deg, rgba(31, 107, 97, 0.024) 0 1px, transparent 1px 31px);
+  background-position:
+    center,
+    center,
+    120% 18px,
+    0 0;
+  background-size:
+    auto,
+    auto,
+    260px auto,
+    auto;
+  backdrop-filter: blur(9px) saturate(1.05);
   box-shadow:
     inset 1px 0 0 rgba(255, 255, 255, 0.28),
     -18px 0 46px rgba(25, 38, 35, 0.035);
@@ -1085,8 +1198,8 @@
 .auth-panel,
 .comment-section {
   background:
-    linear-gradient(180deg, rgba(255, 253, 248, 0.64), rgba(250, 250, 245, 0.52)),
-    repeating-linear-gradient(0deg, rgba(179, 138, 46, 0.022) 0 1px, transparent 1px 29px);
+    linear-gradient(180deg, rgba(255, 253, 248, 0.7), rgba(250, 250, 245, 0.56)),
+    repeating-linear-gradient(0deg, rgba(176, 132, 53, 0.022) 0 1px, transparent 1px 29px);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 16px;
@@ -1328,7 +1441,7 @@ textarea:focus-visible {
   }
 
   .reader-hero {
-    min-height: clamp(390px, 52vh, 560px);
+    min-height: clamp(460px, 62vh, 640px);
   }
 
   .discussion-panel {
@@ -1357,6 +1470,16 @@ textarea:focus-visible {
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(255, 252, 238, 0.64), rgba(228, 242, 234, 0.36)),
+      radial-gradient(circle at 0 22%, rgba(31, 107, 97, 0.14), transparent 46%),
+      repeating-linear-gradient(0deg, rgba(176, 132, 53, 0.02) 0 1px, transparent 1px 30px);
+  }
+
+  .reading-rail::before,
+  .discussion-panel::before,
+  .book-atlas::after {
+    content: none;
   }
 
   .brand-block {
@@ -1384,26 +1507,36 @@ textarea:focus-visible {
   }
 
   .reader-hero {
-    min-height: 420px;
+    min-height: 500px;
     margin: 0 -16px;
     align-items: flex-start;
     background-image:
-      linear-gradient(180deg, rgba(250, 248, 238, 0.62) 0%, rgba(247, 250, 244, 0.42) 48%, rgba(232, 240, 236, 0.28) 100%),
-      linear-gradient(90deg, rgba(255, 253, 247, 0.54), rgba(221, 234, 230, 0.16));
+      linear-gradient(180deg, rgba(250, 248, 238, 0.82) 0%, rgba(247, 250, 244, 0.46) 48%, rgba(232, 240, 236, 0.54) 100%),
+      linear-gradient(90deg, rgba(255, 253, 247, 0.7), rgba(221, 234, 230, 0.12)),
+      url('/images/rousseau-solitary-walk.webp');
     background-position:
       center,
-      center;
+      center,
+      58% center;
     background-size:
       auto,
-      auto;
+      auto,
+      cover;
   }
 
   .reader-hero::before {
     inset: 10px;
+    background:
+      linear-gradient(90deg, rgba(255, 251, 236, 0.08), transparent 58%, rgba(15, 34, 29, 0.08));
+  }
+
+  .reader-hero::after {
+    background:
+      linear-gradient(180deg, rgba(255, 251, 236, 0.06) 0%, transparent 44%, rgba(229, 239, 231, 0.9) 100%);
   }
 
   .hero-copy {
-    padding: 28px 16px 34px;
+    padding: 34px 16px 34px;
   }
 
   .reader-hero h1 {
@@ -1423,6 +1556,15 @@ textarea:focus-visible {
 
   .passage-card h2 {
     padding-right: 34px;
+  }
+
+  .passage-stack::before,
+  .passage-card::before {
+    opacity: 0.42;
+  }
+
+  .path-coordinate {
+    font-size: 10px;
   }
 
   .translation::first-letter {

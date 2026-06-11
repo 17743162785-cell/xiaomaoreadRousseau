@@ -499,7 +499,7 @@ function App() {
         </section>
 
         <div className="passage-stack">
-          {visiblePassages.map((passage) => {
+          {visiblePassages.map((passage, index) => {
             const isActive = passage.id === activePassageId
             const isHighlighted = highlightedPassageIds.has(passage.id)
             const comments = commentsByPassage[passage.id] ?? []
@@ -507,6 +507,7 @@ function App() {
             const translationProfile = getChineseTranslation(book.id)
             const closeReadingNotes = closeReadings[passage.id] ?? passage.closeReading ?? []
             const furtherReadingNotes = furtherReadings[passage.id] ?? passage.furtherReading ?? []
+            const walkStop = String(index + 1).padStart(2, '0')
             return (
               <article
                 className={[
@@ -519,6 +520,9 @@ function App() {
                 id={passage.id}
                 key={passage.id}
               >
+                <span className="path-coordinate" aria-hidden="true">
+                  Promenade {walkStop} · Manuscrit
+                </span>
                 <div className="passage-meta">
                   <span>{book.title}</span>
                   <span>{passage.chapter}</span>

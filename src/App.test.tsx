@@ -20,7 +20,7 @@ describe('Rousseau reader', () => {
 
     await user.click(screen.getByRole('button', { name: '政治经济' }))
 
-    expect(screen.getByRole('button', { name: /《政治经济论》在卢梭思想中的位置/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /《政治经济论》的原文入口/ })).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /人生而自由/ })).not.toBeInTheDocument()
   })
 

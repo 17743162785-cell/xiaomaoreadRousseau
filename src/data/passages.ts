@@ -4,6 +4,7 @@ import { bookOverviewPassages } from './bookOverviewPassages'
 import { continuedTextExpansionPassages } from './continuedTextExpansionPassages'
 import { expandedTextualPassages } from './expandedTextualPassages'
 import { famousWorksCloseReadings } from './famousWorksCloseReadings'
+import { fourthOriginalCloseReadingPassages } from './fourthOriginalCloseReadingPassages'
 import { literaryExpansionPassages } from './literaryExpansionPassages'
 import { rousseauThoughtPassages } from './rousseauThoughtPassages'
 import { secondContinuedTextExpansionPassages } from './secondContinuedTextExpansionPassages'
@@ -182,6 +183,7 @@ export const passages: Passage[] = [
   ...continuedTextExpansionPassages,
   ...secondContinuedTextExpansionPassages,
   ...thirdContinuedTextExpansionPassages,
+  ...fourthOriginalCloseReadingPassages,
   ...bookOverviewPassages,
 ]
 
